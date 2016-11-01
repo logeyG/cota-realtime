@@ -1,0 +1,3 @@
+http://www.cota.com/COTA/media/COTAContent/OpenGTFSData.zip
+http://realtime.cota.com/TMGTFSRealTimeWebService/TripUpdate/TripUpdates.pb
+http://realtime.cota.com/TMGTFSRealTimeWebService/Vehicle/VehiclePositions.pb

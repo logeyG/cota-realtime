@@ -3,7 +3,6 @@ var marker;
 var shape_coordinates = [];
 var i = 0;
 
-
 function init(data) {
 
     $.each(data, function(index, value) {
@@ -17,7 +16,30 @@ function init(data) {
     });
 
     initMap();
-    simulateBus();
+    update();
+}
+
+function update() {
+
+    setTimeout(function() {
+        $.ajax({
+            url: 'http://localhost:8080/api/where/vehicles-for-agency/COTA.json?key=TEST',
+            dataType: 'JSONP',
+            jsonpCallback: 'callback',
+            type: 'GET',
+            success: function(o) {
+
+                console.log(o);
+                var pos = new google.maps.LatLng({
+                    lat: o.data.list[0].tripStatus.position.lat,
+                    lng: o.data.list[0].tripStatus.position.lon
+                });
+
+                move(map, marker, pos);
+                update();
+            }
+        });
+    }, 3000);
 }
 
 function getShapes() {
@@ -44,7 +66,7 @@ function simulateBus() {
             simulateBus();
         }
 
-    }, 100);
+    }, 1000);
 }
 
 function initMap() {
@@ -69,7 +91,7 @@ function initMap() {
         icon: image
     });
 
-    path.setMap(map);
+    //path.setMap(map);
     marker.setMap(map);
 
 }
