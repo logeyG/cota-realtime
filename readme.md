@@ -10,5 +10,5 @@
 - `$ cd cota-realtime`
 - `$ npm install`
 - `$ npm start`
-- navigate in web browser to http://localhost:3000/
+- navigate in web browser to [http://localhost:3000/](http://localhost:3000/)
 - cota-realtime lets you see all the currently active COTA vehicles and select which vehicle you want to recieve realtime updates on. View the web console for more details.
