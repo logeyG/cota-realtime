@@ -1,12 +1,16 @@
 
+1. run OneBusAway Java API Server
 
 - download / install Java 1.7
-- cd to COTA-FRP/OneBusAway
-- run this command to start OneBusAway API Server:
+- download onebusaway-quickstart-assembly-1.1.13-api-webapp.war from here:
+ `https://github.com/OneBusAway/onebusaway-application-modules/wiki/OneBusAway-Quickstart-Guide`
+- place onebusaway-quickstart-assembly-1.1.13-api-webapp.war in COTA-RFP/OneBusAway folder
+- `cd COTA-RFP/OneBusAway`
+- `java -jar onebusaway-quickstart-assembly-1.1.13-api-webapp.war -webapp -gtfsRealtimeAlertsUrl=http://realtime.cota.com/TMGTFSRealTimeWebService/Vehicle/VehiclePositions.pb -gtfsRealtimeTripUpdatesUrl=http://realtime.cota.com/TMGTFSRealTimeWebService/TripUpdate/TripUpdates.pb TransitBundle`
 
-java -jar onebusaway-quickstart-assembly-1.1.13-api-webapp.war -webapp -gtfsRealtimeAlertsUrl=http://realtime.cota.com/TMGTFSRealTimeWebService/Vehicle/VehiclePositions.pb -gtfsRealtimeTripUpdatesUrl=http://realtime.cota.com/TMGTFSRealTimeWebService/TripUpdate/TripUpdates.pb TransitBundle
+2. run node application 
 
 - download / install node.js
-- cd to project root directory
-- run `npm install`
-- run `npm start`
+- `cd COTA-RFP`
+- `npm install`
+- `npm start`
