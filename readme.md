@@ -1,6 +1,6 @@
 ## OneBusAway Java API Server
 - download / install Java 1.7
-- download the latest static data from COTA http://www.cota.com/COTA/media/COTAContent/OpenGTFSData.zip(http://www.cota.com/COTA/media/COTAContent/OpenGTFSData.zip) to cota-realtime/OneBusAway
+- download the latest static data from COTA [http://www.cota.com/COTA/media/COTAContent/OpenGTFSData.zip](http://www.cota.com/COTA/media/COTAContent/OpenGTFSData.zip) to cota-realtime/OneBusAway
 - download [onebusaway-quickstart-assembly-1.1.13-api-webapp.war](https://github.com/OneBusAway/onebusaway-application-modules/wiki/OneBusAway-Quickstart-Guide) to cota-realtime/OneBusAway folder
 - `$ cd cota-realtime/OneBusAway`
 - build/rebuild the TransitBundle: `$ java -Xmx1G -server -jar onebusaway-quickstart-assembly.war -build OpenGTFSData.zip TransitBundle
